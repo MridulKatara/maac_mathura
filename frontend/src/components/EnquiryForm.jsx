@@ -75,43 +75,48 @@ const EnquiryForm = () => {
   return (
     <div className="parallax-container" ref={parallaxContainer}>
       <div className="parallax-layer" data-depth="0.2">
-        <form className="enquiry-form" onSubmit={handleSubmit}>
-          <div className="form-row">
-            <label>
-              Name:
-              <input type="text" name="name" value={formData.name} onChange={handleChange} />
-            </label>
-            {errors.name && <span className="error">{errors.name}</span>}
+        <div className="form-svg-container">
+          <form className="enquiry-form" onSubmit={handleSubmit}>
+            <div className="form-row">
+              <label>
+                Name:
+                <input type="text" name="name" value={formData.name} onChange={handleChange} />
+              </label>
+              {errors.name && <span className="error">{errors.name}</span>}
+            </div>
+            <div className="form-row">
+              <label>
+                Mobile Number:
+                <input type="text" name="mobile" value={formData.mobile} onChange={handleChange} />
+              </label>
+              {errors.mobile && <span className="error">{errors.mobile}</span>}
+            </div>
+            <div className="form-row">
+              <label>
+                Email ID:
+                <input type="email" name="email" value={formData.email} onChange={handleChange} />
+              </label>
+              {errors.email && <span className="error">{errors.email}</span>}
+            </div>
+            <div className="form-row">
+              <label>
+                Select Course Interested In:
+                <select name="course" value={formData.course} onChange={handleChange}>
+                  <option value="animation">Animation</option>
+                  <option value="vfx">VFX</option>
+                  <option value="gaming">Gaming</option>
+                  <option value="web_design">Web Design</option>
+                </select>
+              </label>
+            </div>
+            <div className="form-row">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+          <div className="svg-container">
+            <img src="https://app.svgator.com/assets/svgator.webapp/log-in-girl.svg" alt="Login Illustration" />
           </div>
-          <div className="form-row">
-            <label>
-              Mobile Number:
-              <input type="text" name="mobile" value={formData.mobile} onChange={handleChange} />
-            </label>
-            {errors.mobile && <span className="error">{errors.mobile}</span>}
-          </div>
-          <div className="form-row">
-            <label>
-              Email ID:
-              <input type="email" name="email" value={formData.email} onChange={handleChange} />
-            </label>
-            {errors.email && <span className="error">{errors.email}</span>}
-          </div>
-          <div className="form-row">
-            <label>
-              Select Course Interested In:
-              <select name="course" value={formData.course} onChange={handleChange}>
-                <option value="animation">Animation</option>
-                <option value="vfx">VFX</option>
-                <option value="gaming">Gaming</option>
-                <option value="web_design">Web Design</option>
-              </select>
-            </label>
-          </div>
-          <div className="form-row">
-            <button type="submit">Submit</button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   );

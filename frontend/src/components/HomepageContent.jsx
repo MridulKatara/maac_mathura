@@ -91,9 +91,9 @@ const Home = () => {
           team consisting of industry professionals.
         </p>
         <p className='row1'>
-          MAAC Institute Agra conduct faculty training programs to ensure high standards of teaching in the classroom.
+          MAAC Institute Mathura conduct faculty training programs to ensure high standards of teaching in the classroom.
           All MAAC teachers are trained and vetted by Animation industry professionals who help sharpen their
-          creative & technical skills. MAAC in Agra lays strong emphasis on using the best infrastructure to train
+          creative & technical skills. MAAC in Mathura lays strong emphasis on using the best infrastructure to train
           students. Our MAAC institutes use high-end computers, Wacom tablets & other equipment in the classroom. 
           The infrastructure is similar to that used in the global colleges training in Animation & VFX. 
           This helps create an 'on-the-job' environment in the design classes at MAAC. As a result, MAAC 

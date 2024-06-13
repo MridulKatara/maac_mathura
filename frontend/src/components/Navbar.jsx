@@ -1,5 +1,5 @@
-
 import React, { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav className={`navbar ${ isScrolled ? 'scrolled' : ''} ${ isVisible ? '' : 'hidden'}`}>
       <video src="https://maacdelhi.com/img/maac-logo.mp4" autoPlay loop muted className="navbar-logo"></video>
       <ul className="navbar-menu">
-        <li className="nav-item">Home</li>
+        <li className="nav-item"><Link to="/">Home</Link></li>
         <li className="nav-item dropdown">
           Courses <span className="dropdown-arrow">&#x25BC;</span>
           <ul className="dropdown-content">
@@ -47,7 +47,7 @@ const Navbar = () => {
         </li>
         <li className="nav-item">Showcase</li>
         <li className="nav-item">Learn with us</li>
-        <li className="nav-item">Placements</li>
+        <li className="nav-item"><Link to="/placements">Placements</Link></li>
       </ul>
       <button className="apply-now"><span>APPLY NOW</span></button>
       <div className="contact">Call: +91 82877 83710</div>
@@ -56,4 +56,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/PhoneLink.css';
 
 const PhoneLink = () => {
-  const phoneNumber = '917249647735'; // Phone number in international format
+  const phoneNumber = '917249647735'; 
 
   const handleClick = () => {
     window.location.href = `tel:${phoneNumber}`;

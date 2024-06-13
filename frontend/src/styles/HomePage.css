@@ -1,39 +1,32 @@
-/* src/components/HomePage.css */
 .home-page {
-  padding: 2px;
-}
-
-.image-slider-container {
-  width: 100%; /* Adjust if necessary */
-  margin: 0 auto;
-}
-
-.image-slider-container img {
-  width: 100%;
+  padding: 1px;
 }
 
 .main-content {
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
-.form-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-  background-color: rgb(2, 17, 37);
-}
-
-.bg1 {
+/* .bg1 {
   background-image: url('../images//backgroundtext.png');
   background-size: cover;
   background-position: center;
-}
+} */
 
 .centered-text {
   font-family: 'Conflate', sans-serif;
-  font-size: 3vw; /* Adjust font size for responsiveness */
+  font-size: 3.5vw; 
   text-align: center;
   color: #ffd505;
+  margin: 1px;
+}
+
+.about-maac {
+  font-size: 2vw; 
+  line-height: 1.15em;
+  margin-bottom: 2vw; 
+  letter-spacing: 0.5px;
+  color: black;
+  text-align: center;
 }
 
 .row1,
@@ -42,29 +35,21 @@
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 100%;
-  padding: 0 5vw; /* Adjust according to your layout */
+  padding: 0 5vw; 
   text-align: center;
 }
 
-.about-maac {
-  font-size: 2vw; /* Adjust font size for responsiveness */
-  line-height: 1.15em;
-  margin-bottom: 2vw; /* Adjust spacing */
-  letter-spacing: 0.5px;
-  color: white;
-}
-
 .placements {
-  margin-top: 4vw; /* Adjust spacing */
+  margin-top: 4vw; 
 }
 
 .companies img {
-  max-width: 10vw; /* Adjust image sizes */
-  margin: 0 1vw; /* Adjust spacing */
+  max-width: 10vw; 
+  margin: 0 1vw; 
 }
 
 @media (max-width: 768px) {
-  /* Adjustments for smaller screens */
+  
   .row1,
   .row {
     padding: 0 2vw;
@@ -80,7 +65,7 @@
 }
 
 @media (max-width: 576px) {
-  /* Further adjustments for extra small screens */
+  
   .centered-text {
     font-size: 5vw;
   }

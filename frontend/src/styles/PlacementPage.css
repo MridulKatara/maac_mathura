@@ -1,0 +1,73 @@
+.placement-page {
+    background: url('../images/placementbg.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .main-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .page-heading {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+  
+  .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .left-section, .right-section {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .why-maac-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .why-maac-paragraph {
+    text-align: center;
+  }
+  
+  .image-or-svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .company-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .company-logo {
+    width: 16.66%;
+    height: auto;
+    margin: 5px;
+  }
+  
+  @media (max-width: 1200px) {
+    .company-logo {
+      width: 16%;
+    }
+  }
+  
+  @media (max-width: 760px) {
+    .company-logo {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .company-logo {
+      width: 100%;
+    }
+  }
+  

@@ -1,7 +1,7 @@
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 100vh; /* Adjusted height for better full-screen experience */
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -22,16 +22,35 @@
   align-items: center;
 }
 
+.form-svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .enquiry-form {
   position: relative;
   z-index: 10;
   background: rgba(255, 255, 255, 0.8);
   padding: 2em;
-  border-radius: 8px;
+  border-radius: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+  margin: 0px 0px 50px;
+}
+
+.svg-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 600px;
   margin: 25px;
+}
+
+.svg-container img {
+  width: 100%;
+  height: auto;
 }
 
 .form-row {
@@ -75,9 +94,18 @@
 }
 
 @media (max-width: 768px) {
+  .form-svg-container {
+    flex-direction: column;
+  }
+
   .enquiry-form {
-    max-width: 300px; /* Adjusted max-width for smaller screens */
-    margin: 25px auto; /* Center the form on smaller screens */
-    padding: 1em; /* Reduced padding for smaller screens */
+    max-width: 300px;
+    margin: 25px auto;
+    padding: 1em;
+  }
+
+  .svg-container {
+    max-width: 300px;
+    margin: 25px auto;
   }
 }

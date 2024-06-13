@@ -1,68 +1,33 @@
-import React, { useRef, useEffect } from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import '../styles/ImageSlider.css'; // Import your CSS file with animations
-
+import '../styles/ImageSlider.css'; 
+import React, { useState, useEffect } from 'react';
 import image1 from '../images/image1.jpg';
 import image2 from '../images/image2.jpg';
 import image3 from '../images/image3.jpeg';
 import image4 from '../images/image4.jpg';
 
-const ImageSlider = () => {
-  const sliderRef = useRef(null);
+const images = [image1, image2, image3, image4];
+
+const Slider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (sliderRef.current) {
-        sliderRef.current.style.transform = `translateY(-${scrollTop * 0.5}px)`;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change slide every 3 seconds
+    return () => clearInterval(interval);
   }, []);
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-  };
-
   return (
-    <div className="slider-container" ref={sliderRef}>
-      <Slider {...settings}>
-        <div>
-          <a href="vfx-course.php">
-            <img className="img-fluid" src={image1} alt="VFX Course" />
-          </a>
-        </div>
-        <div>
-          <a href="multimedia-course.php">
-            <img className="img-fluid" src={image2} alt="Multimedia Course" />
-          </a>
-        </div>
-        <div>
-          <a href="game-design-course.php">
-            <img className="img-fluid" src={image3} alt="Game Design Course" />
-          </a>
-        </div>
-        <div>
-          <a href="animation.php">
-            <img className="img-fluid" src={image4} alt="3D Animation" />
-          </a>
-        </div>
-        {/* Add more slides as needed */}
-      </Slider>
+    <div className="slider">
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`slide ${index === currentIndex ? 'active' : ''}`}
+          style={{ backgroundImage: `url(${image})` }}
+        ></div>
+      ))}
     </div>
   );
 };
 
-export default ImageSlider;
+export default Slider;

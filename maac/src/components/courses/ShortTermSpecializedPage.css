@@ -1,0 +1,122 @@
+/* Short-term specialized page styles */
+.short-animation-page {
+  background-image: url("https://maacdelhi.com/img/short-term-main-img.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.short-content {
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.short-content h1 {
+  font-size: 3.1em;
+  margin-bottom: 10px;
+  margin-top: -200px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.short-details {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.short-about-p {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  margin-top: -200px;
+  position: absolute;
+  bottom: -100px;
+}
+
+.short-about-p p {
+  font-size: 1rem;
+  color: black;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  text-align: left;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Design Viz Pro Styles */
+.design-viz-pro {
+  padding: 20px;
+  margin-top: 40px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.design-content {
+  margin-bottom: 20px;
+}
+
+.design-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.design-content h6 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.design-content p {
+  font-size: 1rem;
+}
+
+.software-covered {
+  margin-top: 20px;
+}
+
+.software-covered h5 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.software-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.software-box {
+  text-align: center;
+  width: 120px;
+}
+
+.software-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.software-box p {
+  font-size: 0.9rem;
+}

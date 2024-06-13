@@ -1,0 +1,135 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.navbar.scrolled {
+  background-color: rgba(1, 0, 0, 0.916); /* Translucent background when scrolled */
+  opacity: 0.9;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar:hover {
+  background-color: black; /* Full opacity when hovered */
+  opacity: 1;
+}
+
+.navbar-logo {
+  height: 50px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  color: white;
+  position: relative;
+}
+
+.nav-item {
+  cursor: pointer; /* Pointer cursor for navbar items */
+  position: relative;
+  transition: color 0.3s; /* Smooth color change */
+}
+
+.nav-item:hover {
+  color: #ffcc00; /* Change text color to yellow on hover */
+}
+
+.dropdown-arrow {
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  margin-top: 0; /* Remove top margin */
+  padding: 10px 0; /* Adjusted padding */
+  display: none;
+  position: absolute;
+  background-color: black;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 1px solid #ffcc00; /* Added border */
+  border-radius: 10px; /* Increased border-radius */
+}
+
+.dropdown-content li {
+  color: white;
+  padding: 5.5px 20px; /* Adjusted padding */
+  text-decoration: none;
+  display: block;
+  background-color: black;
+  cursor: pointer; /* Pointer cursor for dropdown items */
+  transition: background-color 0.3s, color 0.3s; /* Smooth color change */
+  border-bottom: 1px solid grey; /* Added line after each dropdown item */
+}
+
+.dropdown-content li:last-child { 
+  border-bottom: none; /* Remove line after last dropdown item */
+}
+
+.dropdown-content li:hover {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block; /* Keep dropdown open when hovering over it */
+}
+
+.apply-now {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.apply-now::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: red;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.apply-now:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.apply-now:hover {
+  background-color: red;
+  color: white;
+}
+
+.apply-now span {
+  position: relative;
+  z-index: 1;
+}
+
+.contact {
+  color: white;
+}

@@ -1,0 +1,77 @@
+.home-page {
+  padding: 1px;
+}
+
+.main-content {
+  margin-top: 2px;
+}
+
+/* .bg1 {
+  background-image: url('../images//backgroundtext.png');
+  background-size: cover;
+  background-position: center;
+} */
+
+.centered-text {
+  font-family: 'Conflate', sans-serif;
+  font-size: 3.5vw; 
+  text-align: center;
+  color: #ffd505;
+  margin: 1px;
+}
+
+.about-maac {
+  font-size: 2vw; 
+  line-height: 1.15em;
+  margin-bottom: 2vw; 
+  letter-spacing: 0.5px;
+  color: black;
+  text-align: center;
+}
+
+.row1,
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 5vw; 
+  text-align: center;
+}
+
+.placements {
+  margin-top: 4vw; 
+}
+
+.companies img {
+  max-width: 10vw; 
+  margin: 0 1vw; 
+}
+
+@media (max-width: 768px) {
+  
+  .row1,
+  .row {
+    padding: 0 2vw;
+  }
+
+  .centered-text {
+    font-size: 4vw;
+  }
+
+  .about-maac {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 576px) {
+  
+  .centered-text {
+    font-size: 5vw;
+  }
+
+  .about-maac {
+    font-size: 4vw;
+  }
+}
+

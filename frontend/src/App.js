@@ -1,25 +1,40 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './components/HomepageContent';
 import Placement from './components/PlacementPage';
+import ShortTermSpecializedPage from './components/ShortTermSpecializedPage';
+import MoreCareerCoursesPage from './components/MoreCareerCoursesPage';
 import SideNavbar from './components/SideNav';
+import Gaming from './components/GamingPage';
+import WebGraphicPage from './components/WebGraphicPage';
+import CoursePage from './components/CoursePage';
+import Contact from './components/Contact';
+import VFXPage from './components/VFXPage';  // Ensure the correct component name
+import DAnimation from './components/AnimationDesignPage';  // Assuming this is the correct file path
 import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <SideNavbar />
-        <Route path="/" exact component={HomePage} />
-        <Route path="/placements" component={Placement} />
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/ShortTermSpecializedPage" element={<ShortTermSpecializedPage />} />
+        <Route path="/MoreCareerCoursesPage" element={<MoreCareerCoursesPage />} />
+        <Route path="/Placement" element={<Placement />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/VFX" element={<VFXPage />} />  {/* Ensure this matches the component */}
+        <Route path="/3DAnimation" element={<DAnimation />} />  {/* Ensure this matches the component */}
+        <Route path="/Gaming" element={<Gaming />} />  {/* Ensure this matches the component */}
+        <Route path="/WebGraphicPage" element={<WebGraphicPage />} />  {/* Ensure this matches the component */}
+        <Route path="/CoursePage" element={<CoursePage />} />  {/* Ensure this matches the component */}
         {/* Add more routes as needed */}
-        <Footer />
-      </div>
-    </Router>
+      </Routes>
+      <SideNavbar />
+      <Footer />
+    </div>
   );
 }
 

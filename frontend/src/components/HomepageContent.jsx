@@ -1,6 +1,4 @@
-// src/components/HomepageContent.jsx
 import React from 'react';
-// import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/HomePage.css';
@@ -24,52 +22,12 @@ import video6 from '../videos/video6.mp4';
 
 import img1 from '../images/img1.png';
 import img2 from '../images/img2.png';
-// import img3 from '../images/img3.png';
-// import img4 from '../images/img4.png';
-// import img5 from '../images/img5.png';
-// import img6 from '../images/img6.png';
+import img3 from '../images/img3.png';
+import img4 from '../images/img4.png';
+import img5 from '../images/img5.png';
+import img6 from '../images/img6.png';
 
 const Home = () => {
-
-  const steps = [
-    {
-      title: 'Enquire',
-      description: 'About Courses, Fees, Duration, Career opportunities',
-      imgSrc: 'images/img1.png',
-      imgAlt: 'Enquire',
-    },
-    {
-      title: 'Enroll',
-      description: 'Hurray! You are a student at maac!',
-      imgSrc: 'images/img2.png',
-      imgAlt: 'Enroll',
-    },
-    {
-      title: 'Attend',
-      description: 'Regular classes and practice with the best trainers in delhi',
-      imgSrc: 'images/img3.png',
-      imgAlt: 'Attend',
-    },
-    {
-      title: 'Participate',
-      description: 'In Seminars, Workshops, Events, Competitions',
-      imgSrc: 'images/img4.png',
-      imgAlt: 'Participate',
-    },
-    {
-      title: 'Submit',
-      description: 'Student works and show reel',
-      imgSrc: 'images/img5.png',
-      imgAlt: 'Submit',
-    },
-    {
-      title: 'Prepare',
-      description: 'Get ready for placements with top companies',
-      imgSrc: 'images/img6.png',
-      imgAlt: 'Prepare',
-    },
-  ];
-
   return (
     <div className="home-page">
       <div className="image-slider-container">
@@ -102,144 +60,170 @@ const Home = () => {
         </p>
       </div>
       <div className="placements">
+      <div className="placements-content">
         <h2>Companies that our students get placements in</h2>
-        <p>Through expert career training and mentorship, our students start their careers at major companies across the globe</p>
-        <div className="companies">
-          <img src={company1} alt="Technicolor" />
-          <img src={company2} alt="MPC" />
-          <img src={company3} alt="DNEG" />
-          <img src={company4} alt="Prime Focus" />
-          <img src={company5} alt="Netflix" />
-          <img src={company6} alt="Red Chillies" />
-        </div>
+        <p>Through expert career training and mentorship, our students start their careers at major companies across the globe.</p>
       </div>
-      <div className="courses-det-bx">
-        <div className="row mx-0">
-          <div className="col-12 col-sm-6 col-md-4 p-2">
-            <div className="courses-img-bx">
-              <video className="cprog-img bg-video-h" autoPlay loop muted playsInline>
-                <source src={video1} type="video/mp4" />
-              </video>
-              <div className="courses-cont-bx">
-                <h2>3D Animation Courses</h2>
-                <span>
-                  <p>Learn animation with the top animation courses at MAAC. Discover animation courses fees and more details about animation related courses.</p>
-                  {/* <a href="ad3d-edge-plus"></a> */}
-                </span>
-              </div>
+      <div className="companies">
+        <img src={company1} alt="Technicolor" />
+        <img src={company2} alt="MPC" />
+        <img src={company3} alt="DNEG" />
+        <img src={company4} alt="Prime Focus" />
+        <img src={company5} alt="Netflix" />
+        <img src={company6} alt="Red Chillies" />
+      </div>
+    </div>
+    <div className="placements-content">
+    <h2>3D Animation Courses</h2>
+    <p>Learn animation with the top animation courses at MAAC. Discover animation courses fees and more details about animation related courses.</p>
+    </div>
+      <div className="courses">
+      <div className="courses-grid">
+        <div className="course-item">
+          <div className="course-video">
+            <video autoPlay loop muted playsInline>
+              <source src={video1} type="video/mp4" />
+            </video>
+            <div className="course-content">
+              
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2">
-            <div className="courses-img-bx">
-              <video className="cprog-img bg-video-h" autoPlay loop muted playsInline>
-                <source src={video2} type="video/mp4" />
-              </video>
-              <div className="courses-cont-bx">
-                <h2>VFX Courses</h2>
-                <span>
-                  <p>Join a VFX course that covers VFX animation and Learn 3d VFX at MAAC. Know VFX course fees and more details about VFX training.</p>
-                  {/* <a href="advfx-plus"></a> */}
-                </span>
-              </div>
+        </div>
+        <div className="course-item">
+          <div className="course-video">
+            <video autoPlay loop muted playsInline>
+              <source src={video2} type="video/mp4" />
+            </video>
+            <div className="course-content">
+              <h2>VFX Courses</h2>
+              <p>Join a VFX course that covers VFX animation and Learn 3d VFX at MAAC. Know VFX course fees and more details about VFX training.</p>
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2">
-            <div className="courses-img-bx">
-              <video className="cprog-img bg-video-h" autoPlay loop muted playsInline>
-                <source src={video3} type="video/mp4" />
-              </video>
-              <div className="courses-cont-bx">
-                <h2>Gaming Courses</h2>
-                <span>
-                  <p>Explore Game Design Courses at MAAC. Get details about game designing programs’ course fees and more about gaming courses.</p>
-                  {/* <a href="adidg"></a> */}
-                </span>
-              </div>
+        </div>
+        <div className="course-item">
+          <div className="course-video">
+            <video autoPlay loop muted playsInline>
+              <source src={video3} type="video/mp4" />
+            </video>
+            <div className="course-content">
+              <h2>Gaming Courses</h2>
+              <p>Explore Game Design Courses at MAAC. Get details about game designing programs’ course fees and more about gaming courses.</p>
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2">
-            <div className="courses-img-bx">
-              <video className="cprog-img bg-video-h" autoPlay loop muted playsInline>
-                <source src={video4} type="video/mp4" />
-              </video>
-              <div className="courses-cont-bx">
-                <h2>Web & Graphic Design Courses</h2>
-                <span>
-                  <p>See all graphic design courses in Delhi & web designing programs. Options to learn graphic designing in Delhi and related courses fees details.</p>
-                  {/* <a href="apdmd"></a> */}
-                </span>
-              </div>
+        </div>
+        <div className="course-item">
+          <div className="course-video">
+            <video autoPlay loop muted playsInline>
+              <source src={video4} type="video/mp4" />
+            </video>
+            <div className="course-content">
+              <h2>Web & Graphic Design Courses</h2>
+              <p>See all graphic design courses in Delhi & web designing programs. Options to learn graphic designing in Delhi and related courses fees details.</p>
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2">
-            <div className="courses-img-bx">
-              <video className="cprog-img bg-video-h" autoPlay loop muted playsInline>
-                <source src={video5} type="video/mp4" />
-              </video>
-              <div className="courses-cont-bx">
-                <h2>More Career Courses</h2>
-                <span>
-                  <p>Pick out from various digital animation programs at MAAC. Learn about Animation VFX Gaming and other design courses at MAAC Institutes in Delhi.</p>
-                  {/* <a href="career-courses"></a> */}
-                </span>
-              </div>
+        </div>
+        <div className="course-item">
+          <div className="course-video">
+            <video autoPlay loop muted playsInline>
+              <source src={video5} type="video/mp4" />
+            </video>
+            <div className="course-content">
+              <h2>More Career Courses</h2>
+              <p>Pick out from various digital animation programs at MAAC. Learn about Animation VFX Gaming and other design courses at MAAC Institutes in Delhi.</p>
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2">
-            <div className="courses-img-bx">
-              <video className="cprog-img bg-video-h" autoPlay loop muted playsInline>
-                <source src={video6} type="video/mp4" />
-              </video>
-              <div className="courses-cont-bx">
-                <h2>Short Term Courses</h2>
-                <span>
-                  <p>Choose from MAAC courses focussed on specific learning goals in mind for professionals looking to Upskill or add to their skill set.</p>
-                  {/* <a href="short-term-courses"></a> */}
-                </span>
-              </div>
+        </div>
+        <div className="course-item">
+          <div className="course-video">
+            <video autoPlay loop muted playsInline>
+              <source src={video6} type="video/mp4" />
+            </video>
+            <div className="course-content">
+              <h2>Short Term Courses</h2>
+              <p>Choose from MAAC courses focussed on specific learning goals in mind for professionals looking to Upskill or add to their skill set.</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="row">
-        <div className="col-12">
-          <div className="how-it-text w-100 text-center wow slideInLeft" data-wow-duration="1.5s">
-            <h2 className="ho-bg">How it works</h2>
+    </div>
+    <div className="how-it-works">
+      <div className="how-it-text w-100 text-center">
+        <h2 className="how">How it works</h2>
+      </div>
+      <div className="step-container">
+        {/* Step 1 */}
+        <div className="step-row">
+          <div className="step-number">1</div>
+          <div className="step-content">
+            <h2>Enquire</h2>
+            <p>About Courses, Fees, Duration, Career opportunities</p>
+          </div>
+          <div className="step-image">
+            <img src={img1} alt="Enquire" className="img-fluid" />
           </div>
         </div>
-        {steps.map((step, index) => (
-          <div
-            className={`row align-items-center justify-content-center ${index % 2 !== 0 ? 'py-lg-5 rev-row' : ''}`}
-            key={index}
-          >
-            {index % 2 === 0 ? (
-              <>
-                <div className="col-12 col-sm-6 col-lg-5 col-xl-4">
-                  <div className={`tx tx${index + 1} text-md-end`}>
-                    <h4>{step.title}</h4>
-                    <p>{step.description}</p>
-                  </div>
-                </div>
-                <div className="col-12 col-sm-6 col-lg-5 col-xl-4">
-                  <img src={img1} alt={step.imgAlt} loading="lazy" />
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="col-12 col-sm-6 col-lg-5 col-xl-4">
-                  <img src={img2} alt={step.imgAlt} loading="lazy" />
-                </div>
-                <div className="col-12 col-sm-6 col-lg-5 col-xl-4">
-                  <div className={`tx txr tx${index + 1}`}>
-                    <h4>{step.title}</h4>
-                    <p>{step.description}</p>
-                  </div>
-                </div>
-              </>
-            )}
+
+        {/* Step 2 */}
+        <div className="step-row rev-row">
+          <div className="step-number">2</div>
+          <div className="step-image">
+            <img src={img2} alt="Enroll" className="img-fluid" />
           </div>
-        ))}
+          <div className="step-content">
+            <h2>Enroll</h2>
+            <p>Hurray! You are a student at MAAC!</p>
+          </div>
+        </div>
+
+        {/* Step 3 */}
+        <div className="step-row">
+          <div className="step-number">3</div>
+          <div className="step-content">
+            <h2>Attend</h2>
+            <p>Regular classes and practice with the best trainers in Delhi</p>
+          </div>
+          <div className="step-image">
+            <img src={img3} alt="Attend" className="img-fluid" />
+          </div>
+        </div>
+
+        {/* Step 4 */}
+        <div className="step-row rev-row">
+          <div className="step-number">4</div>
+          <div className="step-image">
+            <img src={img4} alt="Participate" className="img-fluid" />
+          </div>
+          <div className="step-content">
+            <h2>Participate</h2>
+            <p>In Seminars, Workshops, Events, Competitions</p>
+          </div>
+        </div>
+
+        {/* Step 5 */}
+        <div className="step-row">
+          <div className="step-number">5</div>
+          <div className="step-content">
+            <h2>Submit</h2>
+            <p>Student works and show reel</p>
+          </div>
+          <div className="step-image">
+            <img src={img5} alt="Submit" className="img-fluid" />
+          </div>
+        </div>
+
+        {/* Step 6 */}
+        <div className="step-row rev-row">
+          <div className="step-number">6</div>
+          <div className="step-image">
+            <img src={img6} alt="Prepare" className="img-fluid" />
+          </div>
+          <div className="step-content">
+            <h2>Prepare</h2>
+            <p>Get ready for placements with top companies</p>
+          </div>
+        </div>
       </div>
+    </div>
     </div>
   );
 };

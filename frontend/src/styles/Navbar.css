@@ -1,3 +1,4 @@
+/* General navbar styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -11,7 +12,7 @@
 }
 
 .navbar.scrolled {
-  background-color: rgba(1, 0, 0, 0.916); /* Translucent background when scrolled */
+  background-color: rgba(1, 0, 0, 0.916);
   opacity: 0.9;
 }
 
@@ -20,7 +21,7 @@
 }
 
 .navbar:hover {
-  background-color: black; /* Full opacity when hovered */
+  background-color: black;
   opacity: 1;
 }
 
@@ -36,14 +37,28 @@
   position: relative;
 }
 
+.navbar-menu.open {
+  display: flex; /* Show menu when toggled */
+  flex-direction: column; /* Stack menu items vertically */
+  background-color: black; /* Apply background color */
+  position: absolute;
+  top: 60px; /* Position below navbar */
+  left: 0;
+  right: 0;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 8px; /* Rounded corners for menu */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+
 .nav-item {
-  cursor: pointer; /* Pointer cursor for navbar items */
+  cursor: pointer;
   position: relative;
-  transition: color 0.3s; /* Smooth color change */
+  transition: color 0.3s;
 }
 
 .nav-item:hover {
-  color: #ffcc00; /* Change text color to yellow on hover */
+  color: #ffcc00;
 }
 
 .dropdown-arrow {
@@ -51,30 +66,30 @@
 }
 
 .dropdown-content {
-  margin-top: 0; /* Remove top margin */
-  padding: 10px 0; /* Adjusted padding */
   display: none;
   position: absolute;
   background-color: black;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  border: 1px solid #ffcc00; /* Added border */
-  border-radius: 10px; /* Increased border-radius */
+  border: 1px solid #ffcc00;
+  border-radius: 10px;
+  padding: 10px 0;
+  margin-top: 0;
 }
 
 .dropdown-content li {
   color: white;
-  padding: 5.5px 20px; /* Adjusted padding */
+  padding: 5.5px 20px;
   text-decoration: none;
   display: block;
+  cursor: pointer;
   background-color: black;
-  cursor: pointer; /* Pointer cursor for dropdown items */
-  transition: background-color 0.3s, color 0.3s; /* Smooth color change */
-  border-bottom: 1px solid grey; /* Added line after each dropdown item */
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid grey;
 }
 
-.dropdown-content li:last-child { 
-  border-bottom: none; /* Remove line after last dropdown item */
+.dropdown-content li:last-child {
+  border-bottom: none;
 }
 
 .dropdown-content li:hover {
@@ -84,11 +99,6 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropdown:hover .dropdown-content,
-.dropdown-content:hover {
-  display: block; /* Keep dropdown open when hovering over it */
 }
 
 .apply-now {
@@ -132,4 +142,30 @@
 
 .contact {
   color: white;
+}
+
+.hamburger {
+  display: none; /* Hide by default */
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none; /* Hide menu by default on small screens */
+  }
+
+  .navbar-menu.open {
+    display: flex; /* Show menu when toggled */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+
+  .apply-now, .contact {
+    display: none; /* Hide apply now and contact info on small screens */
+  }
 }
